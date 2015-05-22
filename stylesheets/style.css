@@ -1,0 +1,43 @@
+body {
+	font-family: Lucida}
+
+li{
+	font-size: 20px;
+	line-height: 44px;
+}
+
+h1 {
+	font-size: 40px;
+	color: #494869;
+	text-align: center;
+}
+
+h2{
+	font-size: 40px;
+}
+
+body {
+	background-color: beige;
+}
+
+.lesson{
+	background-color: #294860;
+	border-radius: 60px;
+	color: white;
+	padding: 40px;
+	margin: 20px;
+	text-align:center}
+
+.concept{
+	background-color: teal;
+	border-radius: 40px;
+	padding: 10px;
+	margin: 10px;}
+
+.concept-title{
+	font-size: 30px;
+	font-weight: bold}
+
+.concept-description{
+	font-size: 20px;
+}

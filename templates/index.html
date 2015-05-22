@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    	<title>Notes</title>
+  </head>
+  
+ <body>
+
+	<div class="TOC">
+      <h1> Table of Contents </h1>
+	
+	  <ol>
+        <li><a href="#lesson-1">Lesson 1: The Basics of the Web and HTML</a>
+        {% for concept in concepts1 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-2">Lesson 2: Creating a Structured Document with HTML</a>
+        {% for concept in concepts2 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-3">Lesson 3: Adding HTML to CSS</a>
+        {% for concept in concepts3 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-4">Lesson 4: Introduction to "Serious" Programming</a>
+        {% for concept in concepts4 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-5">Lesson 5: Variables and Strings</a>
+        {% for concept in concepts5 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-6">Lesson 6: Input->Function->Output</a>
+        {% for concept in concepts6 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-7">Lesson 7: Decisions and Repetitions: If and While</a>
+        {% for concept in concepts7 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-8">Lesson 8: Structured Data: Lists and For Loops</a>
+        {% for concept in concepts8 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-9">Lesson 9: The Power of Abstraction</a>
+        {% for concept in concepts9 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#lesson-10">Lesson 10: Working with the Full Stack</a>
+        {% for concept in concepts10 %}
+          {% include "render_toc.html" %}
+        {% endfor %}
+        </li>
+        <li><a href="#links">Helpful Links</a></li>
+      </ol>
+    </div>          
+    
+    <h1>Key Concepts</h1>
+
+	<div class="lesson">
+      <h2 id="lesson-1">Lesson 1: The Basics of the Web and HTML</h2>
+
+		{% for concept in concepts1 %}					
+			{% include "render_concept.html" %}	
+	 	{% endfor %}
+	</div>
+
+	<div class="lesson">
+        <h2 id="lesson-2">Lesson 2: Creating a Structured Document with HTML</h2>
+
+    	{% for concept in concepts2 %}
+						
+			{% include "render_concept.html" %}
+			
+		{% endfor %}
+	</div>
+
+  	<div class="lesson">
+      <h2 id="lesson-3">Lesson 3: Adding CSS to HTML</h2>
+
+    	{% for concept in concepts3 %}
+					
+			{% include "render_concept.html" %}
+
+		{% endfor %}
+	</div>
+
+	<div class="lesson">
+      <h2 id="lesson-4">Lesson 4: Introduction to "Serious" Programming"</h2>
+
+  		{% for concept in concepts4 %}
+					
+			{% include "render_concept.html" %}
+							
+		{% endfor %}
+	</div>
+
+	<div class="lesson">
+      <h2 id="lesson-5">Lesson 5: Variables and Strings</h2>
+
+      	{% for concept in concepts5 %}
+					
+			{% include "render_concept.html" %}
+
+		{% endfor %}
+	</div>
+
+	<div class="lesson">
+      <h2 id="lesson-6">Lesson 6: Input->Function->Output</h2>
+
+		{% for concept in concepts6 %}
+					
+			{% include "render_concept.html" %}
+
+		{% endfor %}
+	</div>
+
+	<div class="lesson">
+      <h2 id="lesson-7">Lesson 7: Decisions and Repetitions: If and While</h2>
+
+      	{% for concept in concepts7 %}
+					
+			{% include "render_concept.html" %}
+
+		{% endfor %}
+	</div>
+
+	<div class="lesson">
+      <h2 id="lesson-8">Lesson 8: Stuctured Data: Lists and For Loops</h2>
+
+    	{% for concept in concepts8 %}
+					
+			{% include "render_concept.html" %}
+
+		{% endfor %}
+	</div> 
+
+	<div class="lesson">
+      <h2 id="lesson-9">Lesson 9: The Power of Abstraction</h2>
+
+   		{% for concept in concepts9 %}
+					
+			{% include "render_concept.html" %}
+
+		{% endfor %}
+	</div>
+
+
+	<div class="lesson">
+      <h2 id="lesson-10">Lesson 10: Working with the Full Stack</h2>
+
+    	{% for concept in concepts10 %}
+					
+			{% include "render_concept.html" %}
+
+		{% endfor %}
+	</div>
+
+	<div class="lesson">
+       <h2 id="links">Helpful Links</h2>
+        <div class="concept">
+            {% for link in links %}
+              <blockquote><a href="{{ link.linkurl }}">{{ link.name }}</a></blockquote>
+            {% endfor %}
+        	<p>Enter your helpful links here!</p>
+    		<form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+		  		<label> Site Name:
+		  		<div><textarea name="name" rows="2" cols="150"></textarea></div>
+		  		</label>
+		  		<label> Site URL:
+		  		<div><textarea name="linkurl" rows="2" cols="150"></textarea></div>
+		  		</label>
+		  		<div><input type="submit" value="Enter Link"></div>
+    		</form>
+		</div>
+    </div>
+ </body>
+</html>
+
+
+
+ 
